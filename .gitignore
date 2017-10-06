@@ -37,4 +37,4 @@ src/main/resources/static/js/**/*.js
 !src/main/resources/static/js/scripts/*.js
 #ignorar css
 src/main/resources/static/css
-src/main/resources/static/js/**/*.css
+src/main/resources/static/js/plugins
