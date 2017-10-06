@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+		<div class="col-md-12">
+
+			<!-- Advanced legend -->
+			<form action="#">
+				<div class="panel">
+					<div class="panel-heading bg-primary">
+						<h5 class="panel-title">Registro del personal</h5>
+					</div>
+
+					<div class="panel-body">
+						<fieldset>
+							<legend class="text-semibold">
+								<i class="icon-file-text2 position-left"></i> Información básica
+								<a class="control-arrow" data-toggle="collapse"
+									data-target="#infobasic1"> <i class="icon-circle-down2"></i>
+								</a>
+							</legend>
+
+							<div class="collapse in" id="infobasic1">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="name">Nombre(s):</label> <input type="text"
+												id="name" class="form-control" placeholder="Juan" />
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Apellido paterno:</label> <input type="text"
+												class="form-control" placeholder="Mengano" />
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Apellido materno:</label> <input type="text"
+												class="form-control" placeholder="Sutano" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label>Tipo de documento:</label> <select
+												class="bootstrap-select" data-width="100%">
+												<option value="">Seleccione</option>
+												<option value="1">DNI</option>
+												<option value="2">Carnet de extranjería</option>
+												<option value="3">Pasaporte</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label>DNI:</label> <input type="text" class="form-control"
+												placeholder="Número de DNI" />
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label>Nacionalidad:</label> <input type="text"
+												class="form-control" placeholder="Peruano" />
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label>Fecha de nacimiento:</label> <input type="text"
+												class="form-control" placeholder="dd/mm/yyyy" />
+										</div>
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Estado civil:</label> <select class="bootstrap-select"
+												data-width="100%">
+												<option value="AK">Seleccione</option>
+												<option value="HI">Soltero</option>
+												<option value="CA">Casado</option>
+												<option value="NV">Viudo</option>
+												<option value="OR">Divorciado</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Número de hijo(s):</label> <input type="text"
+												class="form-control" placeholder="0" />
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="display-block">Género:</label> <label
+												class="radio-inline"> <input type="radio"
+												name="gender2" class="styled" checked="checked" />
+												Masculino
+											</label> <label class="radio-inline"> <input type="radio"
+												name="gender2" class="styled" /> Femenino
+											</label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend class="text-semibold">
+								<i class="icon-reading position-left"></i> Datos laborales <a
+									class="control-arrow" data-toggle="collapse"
+									data-target="#datosLaborales"> <i class="icon-circle-down2"></i>
+								</a>
+							</legend>
+
+							<div class="collapse in" id="datosLaborales">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Area:</label> <select class="bootstrap-select"
+												data-width="100%">
+												<option value="AK">Seleccione</option>
+												<option value="HI">Ica</option>
+												<option value="CA">Lima</option>
+												<option value="NV">Nevada</option>
+												<option value="OR">Oregon</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Cargo:</label> <select class="bootstrap-select"
+												data-width="100%">
+												<option value="AK">Seleccione</option>
+												<option value="HI">Chincha</option>
+												<option value="CA">California</option>
+												<option value="NV">Nevada</option>
+												<option value="OR">Oregon</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Sueldo:</label>  <input type="text"
+												class="form-control" placeholder="00000.00" />
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend class="text-semibold">
+								<i class="icon-reading position-left"></i> Contacto Directo <a
+									class="control-arrow" data-toggle="collapse"
+									data-target="#demo2"> <i class="icon-circle-down2"></i>
+								</a>
+							</legend>
+
+							<div class="collapse in" id="demo2">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Teléfono de casa:</label> <input type="text"
+												class="form-control" placeholder="(51) ___-____" />
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Teléfono móvil:</label> <input type="text"
+												class="form-control" placeholder="9__-___-___" />
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Correo electrónico:</label> <input type="text"
+												class="form-control" placeholder="Ejemplo@example.com" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Dirección:</label> <input type="text"
+												class="form-control"
+												placeholder="Ingresar dirección de domicilio" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Departamento:</label> <select class="bootstrap-select"
+												data-width="100%">
+												<option value="AK">Seleccione</option>
+												<option value="HI">Ica</option>
+												<option value="CA">Lima</option>
+												<option value="NV">Nevada</option>
+												<option value="OR">Oregon</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Provincia:</label> <select class="bootstrap-select"
+												data-width="100%">
+												<option value="AK">Seleccione</option>
+												<option value="HI">Chincha</option>
+												<option value="CA">California</option>
+												<option value="NV">Nevada</option>
+												<option value="OR">Oregon</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Distrito:</label> <select class="bootstrap-select"
+												data-width="100%">
+												<option value="AK">Seleccione</option>
+												<option value="HI">Chincha alta</option>
+												<option value="CA">California</option>
+												<option value="NV">Nevada</option>
+												<option value="OR">Oregon</option>
+											</select>
+										</div>
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-md-12">
+											<div id="map_container" style="width: 100%; height: 400px;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">&nbsp;</div>
+							</div>
+						</fieldset>
+
+
+						<div class="pull-right">
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">
+									Guardar <i class="icon-arrow-right14 position-right"></i>
+								</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</form>
+			<!-- /a legend -->
+
+		</div>
+
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+		<script th:src="@{/js/scripts/CustomerManagement.js}"></script>
+		<script th:src="@{/js/plugins/forms/selects/bootstrap_select.min.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/form_layouts.js}"></script> -->
+		<script type="text/javascript" 
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD57M3S1h8PJ3X0efK1ex5-meOj5ZJ-P8w&amp;libraries=places&quot;&gt;"></script>
+
+	</th:block>
+
+
+
+</body>
+</html>

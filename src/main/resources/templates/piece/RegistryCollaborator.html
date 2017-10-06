@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- "row -->
+	<div class="row">
+
+		<div class="col-md-12">
+			<form id="form" action="#" th:object="${collaborator}"
+				th:action="@{/colaborador/mantenimiento/registry/save}"
+				th:method="post">
+				<div class="row">
+					<!-- 					<div class="col-md-12"> -->
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Nombre(s):</label> <input type="text" id="cname"
+									name="name" class="form-control" th:field="*{name}"
+									th:value="*{name}" placeholder="Escriba el nombre..." />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Apellido paterno:</label> <input type="text"
+									id="capellido_pat" name="apellido_pat" class="form-control"
+									th:field="*{lastNamePaternal}" th:value="*{lastNamePaternal}"
+									placeholder="Escriba el apellido paterno..." />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Apellido materno:</label> <input type="text"
+									id="capellido_mat" name="apellido_mat" class="form-control"
+									th:field="*{lastNameMaternal}" th:value="*{lastNameMaternal}"
+									placeholder="Escriba el apellido materno..." />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>DNI:</label> <input type="text" id="cdni" name="dni"
+									class="form-control" th:field="*{dni}" th:value="*{dni}"
+									placeholder="Escriba el DNI..." />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Fecha de nacimiento:</label> <input type="date"
+									id="cfechana_cimiento" name="fecha_nacimiento"
+									th:fiedl="*{dateOfBirth}" th:value="*{dateOfBirth}"
+									class="form-control" placeholder="Ingrese Fecha de nacimiento" />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Nro. Hijos:</label> <input type="text" id="cnro_hijo"
+									name="nro_hijo" class="form-control"
+									th:field="*{numberChildren}" th:value="*{numberChildren}"
+									placeholder="Ingrese cantidad de hijo(s)" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Dirección:</label> <input type="text" id="cdireccion"
+									name="direccion" class="form-control" th:field="*{address}"
+									th:value="*{address}"
+									placeholder="Escriba la direccion de domicilio..." />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>E-mail:</label> <input type="email" id="cemail"
+									name="email" class="form-control" th:field="*{email}"
+									th:value="*{email}" placeholder="Escriba el e-mail" />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Teléfono:</label> <input type="tel" id="ctelefono"
+									name="telefono" class="form-control" th:field="*{telephone}"
+									th:value="*{telephone}"
+									placeholder="Integrese el número telefono(cel)..." />
+							</div>
+						</div>
+					</div>
+					<!-- 					</div> -->
+				</div>
+			</form>
+			<!-- /form centered -->
+		</div>
+
+	</div>
+	<!-- /Row -->
+
+	
+</body>
+</html>

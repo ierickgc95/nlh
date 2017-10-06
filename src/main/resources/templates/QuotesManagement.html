@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<!-- 								panel -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h6 class="panel-title">Búsqueda de Cotización</h6>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<li><a data-action="reload"></a></li>
+								<li><a data-action="close"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Buscar por:</label> <select id="buscador"
+										class="select" data-width="100%">
+										<option value="AK">Estado</option>
+										<option value="HI">Soltero</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Estado:</label> <select id="buscador"
+										class="select" data-width="100%">
+										<option value="AK">Seleccione</option>
+										<option value="HI">Soltero</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 								/panel -->
+			</div>
+		</div>
+
+
+
+		<div class="pull-right">
+			<a th:href="@{/employee/management/registry}"><button
+					type="button" class="btn btn-primary">
+					<i class="fa fa-plus position-left"></i> Agregar Nuevo
+				</button> </a>
+		</div>
+
+		<!-- 		Start table -->
+		<table class="table datatable-responsive">
+			<thead>
+				<tr>
+					<th>Cliente</th>
+					<th>Contacto</th>
+					<th>Vendedor</th>
+					<th>Total</th>
+					<th>Fecha</th>
+					<th>Estado</th>
+					<th class="text-center">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Marth Gonzales</td>
+					<td>
+					<small><a href="#">91728455</a></small><br/>
+					<small><i class="fa fa-envelope"></i>Mgonzales@gmail.com</small>
+					</td>
+					<td>Jean Bautista</td>
+					<td>S/. 3500</td>
+					<td>01/08/2016 1:10 pm</td>
+					<td><span class="label label-success">Atendido</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Jackelyn Jackelyn Weible</td>
+					<td><a href="#">91728455</a><br/>
+					<small><i class="fa fa-envelope"></i>JWeible@gmail.com</small></td>
+					<td>Jean Bautista</td>
+					<td>S/. 4200</td>
+					<td>01/08/2016 1:00 pm</td>
+					<td><span class="label label-success">Atendido</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Aura Hard Hard</td>
+					<td><a href="#">91728455</a><br/>
+					<small><i class="fa fa-envelope"></i>AHard@gmail.com</small></td>
+					<td>Jean Bautista</td>
+					<td>S/. 1200</td>
+					<td>01/08/2016 9:57 am</td>
+					<td><span class="label label-danger">Pendiente</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Jackelyn Jackelyn Weible</td>
+					<td><a href="#">91728455</a><br/>
+					<small><i class="fa fa-envelope"></i>JWeible@gmail.com</small></td>
+					<td>Jean Bautista</td>
+					<td>S/. 8900</td>
+					<td>01/08/2016 11:00 pm</td>
+					<td><span class="label label-danger">Pendiente</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Sharan  Jackelyn Weible</td>
+					<td><a href="#">91728455</a><br/>
+					<small><i class="fa fa-envelope"></i>Sharan@gmail.com</small></td>
+					<td>Carlos Samaniego</td>
+					<td>S/. 12500</td>
+					<td>01/08/2016 12:00 pm</td>
+					<td><span class="label label-success">Atendido</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Maxine Weible Sharan</td>
+					<td><a href="#">91728455</a></td>
+					<td>Carlos Samaniego</td>
+					<td>S/. 6000</td>
+					<td>01/08/2016 1:03 pm</td>
+					<td><span class="label label-success">Atendido</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Coy Wollard Maxine</td>
+					<td><a href="#">91728455</a></td>
+					<td>Carlos Samaniego</td>
+					<td>S/. 4500</td>
+					<td>01/08/2016 12:00 pm</td>
+					<td><span class="label label-success">Atendido</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Maxwell Maben Maben</td>
+					<td><a href="#">91728455</a></td>
+					<td>Carlos Samaniego</td>
+					<td>S/. 6800</td>
+					<td>01/08/2016 12:07 pm</td>
+					<td><span class="label label-danger">Pendiente</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Cicely Sigler Sigler</td>
+					<td><a href="#">91728455</a></td>
+					<td>Carlos Samaniego</td>
+					<td>S/. 3200</td>
+					<td>01/08/2016 1:55 pm</td>
+					<td><span class="label label-info">En proceso</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- 	End table -->
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+		<!-- 		<script th:inline="javascript"> -->
+
+		<!-- 		</script> -->
+		<script th:src="@{/js/plugins/tables/datatables/datatables.min.js}"></script>
+		<script
+			th:src="@{/js/plugins/tables/datatables/extensions/responsive.min.js}"></script>
+		<script th:src="@{/js/plugins/forms/selects/select2.min.js}"></script>
+		<script th:src="@{/js/scripts/QuoteManagement.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/datatables_responsive.js}"></script> -->
+
+	</th:block>
+
+
+
+</body>
+</html>

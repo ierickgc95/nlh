@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<meta charset="ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="page-container" th:fragment="pagecontainer">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main sidebar -->
+			<div class="sidebar sidebar-main sidebar-fixed">
+				<div class="sidebar-content">
+
+					<!-- User menu -->
+					<div class="sidebar-user">
+						<div class="category-content">
+							<div class="media">
+								<a href="#" class="media-left"><img
+									th:src="@{/images/placeholder.jpg}" class="img-circle img-sm"
+									alt="" /></a>
+								<div class="media-body">
+									<span class="media-heading text-semibold">Ian Gamboa</span>
+									<div class="text-size-mini text-muted">
+										<i class="icon-pin text-size-small"></i> &nbsp;Administrador,
+										CA
+									</div>
+								</div>
+
+								<div class="media-right media-middle">
+									<ul class="icons-list">
+										<li><a href="#"><i class="icon-cog3"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /user menu -->
+
+
+					<!-- Main navigation -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-content no-padding">
+							<ul class="navigation navigation-main navigation-accordion">
+
+								<!-- Main -->
+								<li class="navigation-header"><span>Principal</span> <i
+									class="icon-menu" title="Main pages"></i></li>
+								<li><a href="index.html"><i class="icon-home4"></i> <span>Inicio</span></a></li>
+								<li><a href="#"><i class="icon-stack2"></i> <span>Mantenimiento</span></a>
+									<ul>
+										<li><a th:href="@{/employee/management}">Trabajadores</a></li>
+										<li><a th:href="@{/customer/management}">Clientes</a></li>
+										<li><a href="#">Usuarios</a></li>
+										<li><a th:href="@{/product/management}">Productos</a></li>
+										<li><a th:href="@{/vehicle/management}">Vehículos</a></li>
+										<li><a th:href="@{/smartphone/management}">Teléfonos</a></li>
+									</ul></li>
+								<li class="navigation-header"><span>Comercial</span> <i
+									class="icon-menu" title="Main pages"></i></li>
+								<li><a href="#"><i class="icon-copy"></i> <span>Cotización</span></a>
+									<ul>
+										<li><a th:href="@{/quotation/quote}">Cotizar</a></li>
+										<li><a th:href="@{/quotation/management}">Cotizaciones</a></li>
+									</ul></li>
+								<li><a th:href="@{/purchaseorder}"><i class="icon-stack"></i> <span>Ordenes
+											de compra</span></a>
+								</li>
+								<li><a href="#"><i class="icon-stack"></i> <span>Ventas</span></a>
+									<ul>
+										<li><a th:href="@{/sale/management}">Venta</a></li>
+									</ul></li>
+								<li><a href="#"><i class="icon-stack"></i> <span>Comprobante
+											de pago</span></a>
+									<ul>
+										<li><a th:href="@{/quotation/quote}" id="layout1">Boletas</a></li>
+										<li><a th:href="@{/quotation/quote}" id="layout1">Facturas</a></li>
+									</ul>
+								</li>
+								<li><a href="#"><i class="icon-droplet2"></i> <span>Guía
+											de remisión</span></a>
+								</li>
+								<!-- /main -->
+
+								<!-- Forms -->
+								<li class="navigation-header"><span>Despacho</span> <i
+									class="icon-menu" title="Forms"></i></li>
+								<li><a href="#"><i class="icon-pencil3"></i> 
+										<span>Tickets de depacho</span>
+									</a>
+								</li>
+								<li class="navigation-header"><span>Garita</span> <i
+									class="icon-menu" title="Forms"></i></li>
+								<li><a href="#"><i class="icon-pencil3"></i> 
+										<span>Control</span>
+									</a>
+								</li>
+								<li class="navigation-header"><span>Monitoreo</span> <i
+									class="icon-menu" title="Forms"></i></li>
+								<li><a th:href="@{/monitoring/transport}"><i class="icon-pencil3"></i> 
+										<span>Monitorizar</span>
+									</a>
+								</li>
+								
+							
+								
+
+								
+
+							</ul>
+						</div>
+					</div>
+					<!-- /main navigation -->
+
+				</div>
+			</div>
+			<!-- /main sidebar -->
+
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Content area -->
+				<div class="content">
+
+
+					<!-- Dashboard content -->
+
+
+					<div layout:fragment="content">
+						<p>Content goes here...</p>
+					</div>
+
+
+
+
+					<!-- /dashboard content -->
+
+
+					<!-- Footer -->
+					<div class="footer text-muted"
+						th:replace="fragments/Footer :: footer">
+						&copy; 2015. <a href="#">Limitless</a> by <a
+							href="http://themeforest.net/user/Kopyov" target="_blank">Ian
+							Gamboa</a>
+					</div>
+					<!-- /footer -->
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+</body>
+</html>

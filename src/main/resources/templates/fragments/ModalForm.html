@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- Remote source -->
+	<div id="modal_remote" class="modal" th:fragment="modal-form">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header bg-primary">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h5 class="modal-title" th:text="${titleFormModal}"></h5>
+				</div>
+
+				<div class="modal-body"></div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+					<input form="form" type="submit" class="btn btn-primary" value="Guardar"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /remote source -->
+
+</body>
+</html>

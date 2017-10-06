@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<!-- 								panel -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h6 class="panel-title">Búsqueda de trabajadores</h6>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<li><a data-action="reload"></a></li>
+								<li><a data-action="close"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Buscar por:</label> <select id="buscador"
+										class="bootstrap-select" data-width="100%">
+										<option value="AK">DNI</option>
+										<option value="HI">Soltero</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>DNI:</label> <input type="text" class="form-control"
+										placeholder="Ingrese número de identificación" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 								/panel -->
+			</div>
+		</div>
+
+
+
+		<div class="pull-right">
+			<a th:href="@{/employee/management/registry}"><button
+					type="button" class="btn btn-primary">
+					<i class="fa fa-plus position-left"></i> Agregar Nuevo
+				</button> </a>
+		</div>
+
+		<!-- 		Start table -->
+		<table class="table datatable-responsive">
+			<thead>
+				<tr>
+					<th>Nombres y apellidos</th>
+					<th>DNI</th>
+					<th>Area</th>
+					<th>Cargo</th>
+					<th>Fecha de nacimiento</th>
+					<th>Estado</th>
+					<th class="text-center">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Marth</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>22 Jun 1972</td>
+					<td><span class="label label-success">Active</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Jackelyn Jackelyn Weible</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>3 Oct 1981</td>
+					<td><span class="label label-default">Inactive</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Aura Hard Hard</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>19 Apr 1969</td>
+					<td><span class="label label-danger">Suspended</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Jackelyn Jackelyn Weible</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>13 Dec 1977</td>
+					<td><span class="label label-info">Pending</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Sharan  Jackelyn Weible</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>30 Dec 1991</td>
+					<td><span class="label label-default">Inactive</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Maxine Weible Sharan</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>Sistemas</td>
+					<td>17 Oct 1987</td>
+					<td><span class="label label-info">Pending</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Coy Wollard Maxine</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>12 Oct 1982</td>
+					<td><span class="label label-success">Active</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Maxwell Maben Maben</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>25 Feb 1988</td>
+					<td><span class="label label-danger">Suspended</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Cicely Sigler Sigler</td>
+					<td><a href="#">91728455</a></td>
+					<td>Comercial</td>
+					<td>vendedor</td>
+					<td>15 Mar 1960</td>
+					<td><span class="label label-info">Pending</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- 	End table -->
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+		<!-- 		<script th:inline="javascript"> -->
+
+		<!-- 		</script> -->
+		<script th:src="@{/js/plugins/tables/datatables/datatables.min.js}"></script>
+		<script
+			th:src="@{/js/plugins/tables/datatables/extensions/responsive.min.js}"></script>
+		<script th:src="@{/js/plugins/forms/selects/select2.min.js}"></script>
+		<script th:src="@{/js/scripts/EmployeeManagement.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/datatables_responsive.js}"></script> -->
+
+	</th:block>
+
+
+
+</body>
+</html>

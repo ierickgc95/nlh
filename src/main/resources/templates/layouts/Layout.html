@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:replace="fragments/Header :: header">
+<link rel="icon" type="image/x-icon" href="@{/images/favicon.ico}"/>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="navbar navbar-default navbar-fixed-top header-highlight"
+		th:replace="fragments/NavBar :: navbar"></div>
+	<div class="page-container"
+		th:replace="fragments/PageContainer :: pagecontainer"></div>
+
+
+	<div id="modal_remote" class="modal" th:include="fragments/ModalForm :: modal-form"></div>
+
+	<th:block layout:fragment="scripts">
+	
+	</th:block>
+
+</body>
+</html>

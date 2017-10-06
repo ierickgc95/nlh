@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<!-- 								panel -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h6 class="panel-title">Búsqueda de ventas</h6>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<li><a data-action="reload"></a></li>
+								<li><a data-action="close"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Buscar por:</label> <select id="buscador"
+										class="select" data-width="100%">
+										<option value="AK">Estado</option>
+										<option value="HI">Soltero</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Estado:</label> <select id="buscador"
+										class="select" data-width="100%">
+										<option value="AK">Seleccione</option>
+										<option value="HI">Soltero</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 								/panel -->
+			</div>
+		</div>
+
+
+
+		<div class="pull-right">
+			<a th:href="@{/sale/management/registry}"><button
+					type="button" class="btn btn-primary">
+					<i class="fa fa-plus position-left"></i> Agregar Nuevo
+				</button> </a>
+		</div>
+
+		<!-- 		Start table -->
+		<table class="table datatable-responsive">
+			<thead>
+				<tr>
+					<th>Nro.</th>
+					<th>Fecha</th>
+					<th>Tipo comprobante</th>
+					<th>Nro.</th>
+					<th>Cliente</th>
+					<th>Vendedor</th>
+					<th>Tipo pago</th>
+					<th>Total</th>
+					<th>Estado</th>
+					<th class="text-center">Acción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>05/08/2017</td>
+					<td>Boleta</td>
+					<td>
+					<small><a href="#">001-000351</a></small><br/>
+					</td>
+					<td>Jackelyv wilde</td>
+					<td>Jean Bautista</td>
+					<td>Contado</td>
+					<td>S/. 350.00</td>
+					<td><span class="label label-success">Pagado</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>05/08/2017</td>
+					<td>Boleta</td>
+					<td>
+					<small><a href="#">001-000352</a></small><br/>
+					</td>
+					<td>Sarah wilde</td>
+					<td>Jean Bautista</td>
+					<td>Contado</td>
+					<td>S/. 1200.00</td>
+					<td><span class="label label-success">Pagado</span></td>
+					<td class="text-center">
+						<ul class="icons-list">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <i class="icon-menu9"></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#"><i class="icon-file-pdf"></i> Export
+											to .pdf</a></li>
+									<li><a href="#"><i class="icon-file-excel"></i> Export
+											to .csv</a></li>
+									<li><a href="#"><i class="icon-file-word"></i> Export
+											to .doc</a></li>
+								</ul></li>
+						</ul>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		<!-- 	End table -->
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+		<!-- 		<script th:inline="javascript"> -->
+
+		<!-- 		</script> -->
+		<script th:src="@{/js/plugins/tables/datatables/datatables.min.js}"></script>
+		<script
+			th:src="@{/js/plugins/tables/datatables/extensions/responsive.min.js}"></script>
+		<script th:src="@{/js/plugins/forms/selects/select2.min.js}"></script>
+		<script th:src="@{/js/scripts/QuoteManagement.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/datatables_responsive.js}"></script> -->
+
+	</th:block>
+
+
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h6 class="panel-title">Registro de venta</h6>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<li><a data-action="reload"></a></li>
+								<li><a data-action="close"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-body">
+						<fieldset>
+							<legend class="text-semibold">Datos de cliente</legend>
+							<div class="row">
+								<div class="col-md-4">
+
+									<div class="form-group">
+										<label class="control-label">Cliente</label>
+										<div class="input-group">
+											<input type="text" class="form-control"
+												placeholder="Buscar por nombre, RUC o DNI" /> <span
+												class="input-group-addon"><i class="fa fa-user-plus"></i></span>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>RUC:</label> <input type="text" class="form-control"
+											placeholder="Ingrese número de identificación" />
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Dirección:</label> <input type="text"
+											class="form-control"
+											placeholder="Ingrese número de identificación" />
+									</div>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend class="text-semibold">Productos</legend>
+							<div class="row">
+								<div class="col-md-12">
+
+									<div class="form-group">
+										<label class="control-label">Producto</label>
+										<div class="input-group">
+											<input type="text" class="form-control"
+												placeholder="Buscar por nombre" /> <span
+												class="input-group-addon"><i class="fa fa-user-plus"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<table class="table datatable-responsive">
+									<thead>
+										<tr>
+											<th>Nro.</th>
+											<th>Cantidad</th>
+											<th>Nombre</th>
+											<th>Prec. Unit.</th>
+											<th>Desc.</th>
+											<th>Total</th>
+											<th class="text-center">Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td><input id="row-1-age" name="row-1-age" value="61"
+												type="text" /></td>
+											<td>Ladrillo King Kong 18</td>
+											<td>S/. 0.35</td>
+											<td>S/. 0.00</td>
+											<td>S/. 350.00</td>
+											<td class="text-center"><i
+												class="fa fa-close text-succes"></i></td>
+										</tr>
+
+									</tbody>
+								</table>
+								<!-- 	End table -->
+							</div>
+						</fieldset>
+						<div class="row">
+							<div class="pull-right">
+								<a th:href="@{#}"><button type="button"
+										class="btn btn-danger">Cancelar Venta</button> </a> <a
+									th:href="@{#}"><button type="button"
+										class="btn btn-success">Registrar Venta</button> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel ">
+					<div class="panel-heading bg-indigo text-center">
+						<h1 class="panel-title">S/. 350.00</h1>
+						<div class="heading-elements"></div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<label>Tipo comprobante:</label> <select id="buscador"
+										class="select" data-width="100%">
+										<option value="AK">Boleta</option>
+										<option value="HI">Factura</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Tipo pago:</label> <select id="buscador" class="select"
+										data-width="100%">
+										<option value="AK">Contado</option>
+										<option value="HI">Cheque</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<label>Serie:</label> <input type="text" class="form-control"
+										placeholder="001" />
+								</div>
+
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Nro. Comprobante:</label> <input type="text"
+										class="form-control" placeholder="0000345" />
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="form-group">
+									<label>Monto recibido:</label> <input type="text"
+										class="form-control" placeholder="00.00" />
+								</div>
+
+							</div>
+
+
+						</div>
+						<hr class="style1" />
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group">
+									<label>Sub Total Precio:</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group text-right">
+									<label>S/. 287.00</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group ">
+									<label>Sub Total Desc.:</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group text-right">
+									<label>S/. 00.00</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group">
+									<label>Transporte:</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group text-right">
+									<label>S/. 00.00</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group">
+									<label>IGV(18%):</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group text-right">
+									<label>S/. 63.00</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group">
+									<label>Total:</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group text-right">
+									<label>S/. 350.00</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+
+		<script th:src="@{/js/plugins/tables/datatables/datatables.min.js}"></script>
+		<script th:src="@{/js/plugins/forms/selects/select2.min.js}"></script>
+		<script th:src="@{/js/scripts/SaleRegistry.js}"></script>
+
+
+	</th:block>
+
+
+
+</body>
+</html>

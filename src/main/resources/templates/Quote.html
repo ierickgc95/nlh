@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+		<div class="col-md-12">
+
+			<!-- Advanced legend -->
+			<form action="#">
+				<div class="panel">
+					<div class="panel-heading bg-primary">
+						<h5 class="panel-title">Cotizar</h5>
+					</div>
+
+					<div class="panel-body">
+						<fieldset>
+							<legend class="text-semibold">
+								<i class="icon-file-text2 position-left"></i> Información básica
+								<a class="control-arrow" data-toggle="collapse"
+									data-target="#infobasic1"> <i class="icon-circle-down2"></i>
+								</a>
+							</legend>
+
+							<div class="collapse in" id="infobasic1">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="NOMBRES Y APELLIDOS / RAZON SOCIAL" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="DNI / RUC" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="TELEFONO / CELULAR" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="E-MAIL" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<select data-placeholder="Select your country" class="select">
+												<option value="USA">DEPARTAMENTO</option>
+												<option value="United Kingdom">United Kingdom</option>
+												<option value="...">...</option>
+												<option value="Australia">Australia</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<select data-placeholder="Select your country" class="select">
+												<option value="USA">PROVINCIA</option>
+												<option value="United Kingdom">United Kingdom</option>
+												<option value="...">...</option>
+												<option value="Australia">Australia</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<select data-placeholder="Select your country" class="select">
+												<option value="USA">DISTRITO</option>
+												<option value="United Kingdom">United Kingdom</option>
+												<option value="...">...</option>
+												<option value="Australia">Australia</option>
+											</select>
+										</div>
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control"
+												placeholder="DIRECCION DE ENTREGA" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-md-12">
+											<div id="map_container" style="width: 100%; height: 400px;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend class="text-semibold">
+								<i class="icon-file-text2 position-left"></i> Seleccione
+								productos <a class="control-arrow" data-toggle="collapse"
+									data-target="#infoProductos"> <i class="icon-circle-down2"></i>
+								</a>
+							</legend>
+
+							<div class="collapse in" id="infoProductos">
+								<div class="row">
+									<div class="col-xs-6 col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+
+									<div class="col-xs-6 col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+
+									<div class="col-xs-6 col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+
+									<div class="col-xs-6 col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="col-md-8 col-md-offset-2">
+											<div class="thumbnail">
+												<div class="thumb">
+													<img th:src="@{/images/enterprise/product/ladrillo001.jpg}"
+														alt="" />
+													<div class="caption-overflow">
+														<span> <a
+															th:href="@{/images/enterprise/product/ladrillo001.jpg}"
+															data-popup="lightbox"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded"><i
+																class="icon-plus3"></i></a> <a href="#"
+															class="btn border-white text-white btn-flat btn-icon btn-rounded ml-5"><i
+																class="icon-link2"></i></a>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="caption text-center">
+													<span class="">Ladrillo</span>
+													<h5 class="no-margin">
+														<b>King kon 18</b>
+													</h5>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Cantidad de millares:</label> <input type="number"
+													class="form-control" placeholder="" />
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<div class="text-right">
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">
+									Enviar <i class="icon-arrow-right14 position-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<!-- /a legend -->
+		</div>
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+
+
+		<script th:src="@{/js/plugins/forms/selects/select2.min.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/form_select2.js}"></script> -->
+		<script th:src="@{/js/scripts/Quote.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/form_layouts.js}"></script> -->
+		<script th:src="@{/js/plugins/media/fancybox.min.js}"></script>
+		<script th:src="@{/js/pages/gallery.js}"></script>
+		<script 
+			src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyD57M3S1h8PJ3X0efK1ex5-meOj5ZJ-P8w&amp;libraries=places
+			"></script>
+
+
+
+
+	</th:block>
+
+
+
+</body>
+</html>

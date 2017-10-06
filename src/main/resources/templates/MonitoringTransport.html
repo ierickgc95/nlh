@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/Layout">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+</head>
+<body class="navbar-top">
+	<th:block layout:fragment="content">
+
+		<div class="hidden">
+			<label for="origen">Origen</label> <input type="text" name="origen"
+				id="origen" placeholder="calle, ciudad, estado..." /> <br /> <label
+				for="destino">Destino</label> <input type="text" name="destino"
+				id="destino" placeholder="calle, ciudad, estado..." /> <br /> <label
+				for="waypoints">waypoints</label> <input type="text" name="destino"
+				id="waypoints" placeholder="calle, ciudad, estado..." /> <br /> <input
+				type="button" id="buscarss" value="Buscar ruta" />
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<!-- 								panel -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h6 class="panel-title">Búsqueda de transportes</h6>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<li><a data-action="reload"></a></li>
+								<li><a data-action="close"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Buscar por:</label> <select id="buscador" class="select"
+										data-width="100%">
+										<option value="AK">Placa</option>
+										<option value="HI">Viajes</option>
+										<option value="CA">Casado</option>
+										<option value="NV">Viudo</option>
+										<option value="OR">Divorciado</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Placa:</label> <input type="text" class="form-control"
+										placeholder="Ingrese Nro. de placa" value="k18-1455" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+					<div class=" pull-right">
+						<button type="button" class="btn btn-success" id="buscar"  >Geolocalizar</button>
+						</div>
+					</div>
+				</div>
+				<!-- 								/panel -->
+			</div>
+		</div>
+
+		<br />
+		<!-- 		<h3>Opciones</h3> -->
+		<!-- 		<div id="rutaOps"> -->
+		<!-- 			<select id="modo_viaje" class="opciones_ruta"> -->
+		<!-- 				<option value="DRIVING" selected="selected">Auto</option> -->
+		<!-- 				<option value="BICYCLING">Bicicleta</option> -->
+		<!-- 				<option value="WALKING">Caminando</option> -->
+		<!-- 			</select> <select id="tipo_sistema" class="opciones_ruta"> -->
+		<!-- 				<option value="METRIC" selected="selected">Métrico</option> -->
+		<!-- 				<option value="IMPERIAL">Imperial</option> -->
+		<!-- 			</select> -->
+		<!-- 		</div> -->
+		<br />
+		<div>
+			<div id="map_container"
+				style="float: left; width: 70%; height: 500px"></div>
+			<div id="panel_ruta"
+				style="float: right; overflow: auto; width: 30%; height: 500px"></div>
+		</div>
+	</th:block>
+
+	<th:block layout:fragment="scripts">
+		<script th:src="@{/js/plugins/forms/selects/select2.min.js}"></script>
+		<script th:src="@{/js/scripts/MonitoringTransport.js}"></script>
+		<!-- 		<script th:src="@{/js/pages/form_select2.js}"></script> -->
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD57M3S1h8PJ3X0efK1ex5-meOj5ZJ-P8w&;sensor=false"></script>
+	</th:block>
+
+
+
+</body>
+</html>
